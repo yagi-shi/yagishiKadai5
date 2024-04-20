@@ -8,11 +8,18 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     //項目定義
     @IBOutlet weak var value1: UITextField!
     @IBOutlet weak var value2: UITextField!
     @IBOutlet weak var result: UILabel!
+    
+    override func viewDidLoad() {
+    super.viewDidLoad()
+            
+    // テキストフィールドのキーボードタイプを数字専用に設定
+        value1.keyboardType = UIKeyboardType.numberPad
+        value2.keyboardType = UIKeyboardType.numberPad
+        }
     
     //「計算する」押下
     @IBAction func calculate(_ sender: Any) {
